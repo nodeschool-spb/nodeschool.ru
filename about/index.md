@@ -9,6 +9,7 @@ author:
   name: Тим Маринин
   url: https://marinintim.com
   pronouns: he/him
+date: 2020-10-21
 ---
 
 На сайте Нодскула пишут разные авторы — каждая статья подписана,
