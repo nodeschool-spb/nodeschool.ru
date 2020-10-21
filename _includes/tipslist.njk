@@ -1,0 +1,21 @@
+<ul class="tipslist">
+{% for post in collections[tipsTag] %}
+  {%- if not post.data.deprecated -%}
+  <li class="tipslist-item{% if post.url == url and not post.data.draft %} tipslist-item-active{% endif %}">
+    {%- if post.data.draft -%}
+      <span class="tipslist-link tipslist-draft">{{post.data.title}}</span>
+    {%- else -%}
+      <a href="{{ post.url | url }}" class="tipslist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    {%- endif -%}
+    {%- for tag in post.data.tags -%}
+      {%- if tag !== tipsTag -%}
+        {%- if collections.tagList.indexOf(tag) != -1 -%}
+        {%- set tagUrl %}/tags/{{ tag }}/{%- endset -%}
+          &nbsp;<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </li>
+  {%- endif -%}
+{% endfor %}
+</ul>

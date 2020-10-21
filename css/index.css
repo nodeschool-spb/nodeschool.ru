@@ -224,3 +224,44 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: #aaa;
 }
+
+.article-footer {
+  padding: 1em 0;
+}
+
+.tmpl-post .article-footer {
+  margin-top: 1em;
+}
+
+.tipslist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tipslist-draft {
+  color: #000;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-gap: 2em;
+}
+
+.catalog section {
+  max-width: 20em;
+}
+
+.catalog h2 {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.catalog p {
+  margin: 0;
+}
+
+.catalog li + li {
+  margin-top: .25em;
+}

@@ -1,15 +1,53 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Home
+  key: Главная
   order: 1
 ---
+<h1>Каталог советов</h1>
 
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+<div class="catalog">
+	<section>
+		<h2>Установка Node.js</h2>
+		{% set tipsTag = 'setup' %}
+		{% include "tipslist.njk" %}
+	</section>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+
+	<section>
+		<h2>Как устроено</h2>
+		<p></p>
+		{% set tipsTag = 'details' %}
+		{% include "tipslist.njk" %}
+	</section>
+
+	<section>
+		<h2>Хорошие модули</h2>
+		<p>В npm много разных модулей, помогаем выбрать хорошие:</p>
+		{% set tipsTag = 'modules' %}
+		{% include "tipslist.njk" %}
+	</section>
+
+	<section>
+		<h2>Практики программирования</h2>
+		{% set tipsTag = 'programming' %}
+		{% include "tipslist.njk" %}
+	</section>
+
+	<section>
+		<h2>Продакшен</h2>
+		<p>Как доставить приложение и как его поднять в продакшене:</p>
+		{% set tipsTag = 'production' %}
+		{% include "tipslist.njk" %}
+	</section>
+
+	<section>
+		<h2>Мета</h2>
+		<p>Заметки про сайт Нодскула:</p>
+		{% set tipsTag = 'meta' %}
+		{% include "tipslist.njk" %}
+	</section>
+</div>
+
+<p>Также см. <a href="{{ '/posts/' | url }}">архив</a>.</p>
