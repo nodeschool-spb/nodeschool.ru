@@ -21,6 +21,6 @@ date: 2020-10-21
 За хостинг сайта отвечает [Тим Маринин][marinintim], с ним можно связаться
 по почте или в телеграме.
 
-[ngh]: https://nodeschool.ru
+[ngh]: https://github.com/nodeschool-spb/nodeschool.ru
 [11ty]: https://11ty.dev
 [marinintim]: https://marinintim.com
